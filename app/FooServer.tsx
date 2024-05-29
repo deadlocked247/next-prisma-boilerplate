@@ -7,5 +7,5 @@ export const FooServer: FC<{}> = async () => {
     },
   });
   const { data } = await fooResp.json();
-  return <div>{data}</div>;
+  return <div>Server: {data}</div>;
 };
