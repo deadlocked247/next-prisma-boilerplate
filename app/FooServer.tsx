@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-export const Foo: FC<{}> = async () => {
+export const FooServer: FC<{}> = async () => {
   const fooResp = await fetch("http://localhost:3000/api/foo", {
     next: {
       tags: ["foo-query"],
