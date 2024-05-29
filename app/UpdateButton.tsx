@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/lib/components/Button";
 import { updateFoo } from "@/server/actions/updateFoo";
 import { FC, useRef, useTransition } from "react";
 
@@ -14,13 +15,9 @@ export const UpdateButton: FC<{}> = (props) => {
 
   return (
     <div className="flex gap-2">
-      <button
-        className="rounded border border-gray-600 bg-blue-300 p-1"
-        disabled={updating}
-        onClick={doUpdate}
-      >
+      <Button disabled={updating} onClick={doUpdate}>
         {updating ? "Updating..." : "Update"}
-      </button>
+      </Button>
     </div>
   );
 };
